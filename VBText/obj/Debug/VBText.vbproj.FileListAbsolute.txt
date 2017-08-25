@@ -1,0 +1,11 @@
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\bin\Debug\VBText.exe.config
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\bin\Debug\VBText.exe
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\bin\Debug\VBText.pdb
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\bin\Debug\VBText.xml
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.Form1.resources
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.Resources.resources
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.vbproj.GenerateResource.Cache
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.exe
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.xml
+c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.pdb
+C:\Users\bport\Documents\Visual Studio 2017\Projects\VBText\VBText\obj\Debug\VBText.vbprojResolveAssemblyReference.cache
