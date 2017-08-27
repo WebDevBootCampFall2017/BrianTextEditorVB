@@ -40,28 +40,10 @@ Coding Boot Camp")
 
     End Sub
 
-    Private Sub FontSizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontSizeToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub FontColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontColorToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub ExitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem1.Click
         Application.Exit()
     End Sub
 
-    Private Sub CheckBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChkBoxWordWrap.Click
-        'Word Wrap Function
-        If ChkBoxWordWrap.Checked Then
-            RichTextBox1.WordWrap = True
-        Else
-            RichTextBox1.WordWrap = False
-        End If
-
-
-    End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
@@ -74,5 +56,16 @@ Coding Boot Camp")
         Else
             RichTextBox1.WordWrap = False
         End If
+    End Sub
+
+    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+
+        FontDialog1.ShowColor = True
+        If FontDialog1.ShowDialog = DialogResult.OK Then
+            RichTextBox1.Font = FontDialog1.Font
+            RichTextBox1.ForeColor = FontDialog1.Color
+        End If
+
+
     End Sub
 End Class

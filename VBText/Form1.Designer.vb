@@ -30,18 +30,18 @@ Partial Class Form1
         Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FontSizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FontStyleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FontColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FindToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FindAndReplaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChkBoxWordWrap = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgramInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.FontDialog1 = New System.Windows.Forms.FontDialog()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,7 +87,7 @@ Partial Class Form1
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.FontSizeToolStripMenuItem, Me.FontStyleToolStripMenuItem, Me.FontColorToolStripMenuItem, Me.FindToolStripMenuItem, Me.FindAndReplaceToolStripMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.FindToolStripMenuItem, Me.FindAndReplaceToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -97,24 +97,6 @@ Partial Class Form1
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
         Me.FontToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.FontToolStripMenuItem.Text = "Font"
-        '
-        'FontSizeToolStripMenuItem
-        '
-        Me.FontSizeToolStripMenuItem.Name = "FontSizeToolStripMenuItem"
-        Me.FontSizeToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.FontSizeToolStripMenuItem.Text = "Font Size"
-        '
-        'FontStyleToolStripMenuItem
-        '
-        Me.FontStyleToolStripMenuItem.Name = "FontStyleToolStripMenuItem"
-        Me.FontStyleToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.FontStyleToolStripMenuItem.Text = "Font Style"
-        '
-        'FontColorToolStripMenuItem
-        '
-        Me.FontColorToolStripMenuItem.Name = "FontColorToolStripMenuItem"
-        Me.FontColorToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.FontColorToolStripMenuItem.Text = "Font Color"
         '
         'FindToolStripMenuItem
         '
@@ -130,7 +112,7 @@ Partial Class Form1
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowThemeToolStripMenuItem, Me.ChkBoxWordWrap})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowThemeToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -140,12 +122,6 @@ Partial Class Form1
         Me.WindowThemeToolStripMenuItem.Name = "WindowThemeToolStripMenuItem"
         Me.WindowThemeToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.WindowThemeToolStripMenuItem.Text = "Window Theme"
-        '
-        'ChkBoxWordWrap
-        '
-        Me.ChkBoxWordWrap.Name = "ChkBoxWordWrap"
-        Me.ChkBoxWordWrap.Size = New System.Drawing.Size(158, 22)
-        Me.ChkBoxWordWrap.Text = "Word Wrap"
         '
         'AboutToolStripMenuItem
         '
@@ -180,6 +156,10 @@ Partial Class Form1
         Me.CheckBox1.Text = "Word Wrap"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -210,12 +190,12 @@ Partial Class Form1
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FontSizeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FontStyleToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FontColorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FindToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FindAndReplaceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WindowThemeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ChkBoxWordWrap As ToolStripMenuItem
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents FontDialog1 As FontDialog
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
