@@ -2,7 +2,7 @@
 
 Public Class Form1
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Application.Exit()
+
     End Sub
 
     Private Sub ProgramInformationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProgramInformationToolStripMenuItem.Click
@@ -50,5 +50,29 @@ Coding Boot Camp")
 
     Private Sub ExitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem1.Click
         Application.Exit()
+    End Sub
+
+    Private Sub CheckBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChkBoxWordWrap.Click
+        'Word Wrap Function
+        If ChkBoxWordWrap.Checked Then
+            RichTextBox1.WordWrap = True
+        Else
+            RichTextBox1.WordWrap = False
+        End If
+
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        'Word Wrap function
+        If CheckBox1.Checked = True Then
+            RichTextBox1.WordWrap = True
+        Else
+            RichTextBox1.WordWrap = False
+        End If
     End Sub
 End Class

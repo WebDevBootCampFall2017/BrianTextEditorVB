@@ -37,10 +37,11 @@ Partial Class Form1
         Me.FindAndReplaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChkBoxWordWrap = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgramInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,25 +64,25 @@ Partial Class Form1
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.SaveToolStripMenuItem.Text = "Open"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.ExitToolStripMenuItem.Text = "Save As"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
         Me.ExitToolStripMenuItem1.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -129,7 +130,7 @@ Partial Class Form1
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowThemeToolStripMenuItem, Me.CheckBoxToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowThemeToolStripMenuItem, Me.ChkBoxWordWrap})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -140,11 +141,11 @@ Partial Class Form1
         Me.WindowThemeToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.WindowThemeToolStripMenuItem.Text = "Window Theme"
         '
-        'CheckBoxToolStripMenuItem
+        'ChkBoxWordWrap
         '
-        Me.CheckBoxToolStripMenuItem.Name = "CheckBoxToolStripMenuItem"
-        Me.CheckBoxToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
-        Me.CheckBoxToolStripMenuItem.Text = "Word Wrap"
+        Me.ChkBoxWordWrap.Name = "ChkBoxWordWrap"
+        Me.ChkBoxWordWrap.Size = New System.Drawing.Size(158, 22)
+        Me.ChkBoxWordWrap.Text = "Word Wrap"
         '
         'AboutToolStripMenuItem
         '
@@ -164,15 +165,27 @@ Partial Class Form1
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 24)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal
         Me.RichTextBox1.Size = New System.Drawing.Size(277, 237)
         Me.RichTextBox1.TabIndex = 1
         Me.RichTextBox1.Text = ""
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(184, 7)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 2
+        Me.CheckBox1.Text = "Word Wrap"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(277, 261)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -203,5 +216,6 @@ Partial Class Form1
     Friend WithEvents FindToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FindAndReplaceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WindowThemeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CheckBoxToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChkBoxWordWrap As ToolStripMenuItem
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
