@@ -1,7 +1,25 @@
 ﻿Imports System.IO
 
 Public Class Form1
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAs.Click
+
+        Dim sfd As SaveFileDialog = New SaveFileDialog
+        sfd.DefaultExt = ".txt"
+        sfd.Filter = "Text Files | *.txt"
+        sfd.Title = "Save File As..."
+        sfd.OverwritePrompt = True
+
+        If sfd.ShowDialog = DialogResult.OK Then
+            RichTextBox1.SaveFile(sfd.FileName, RichTextBoxStreamType.PlainText)
+        End If
+
+        'Dim sw As StreamWriter = New StreamWriter(sfd.FileName)
+
+        'If sfd.ShowDialog = DialogResult.OK Then
+        'sw.Write(RichTextBox1.Text)
+        'sw.Close()
+        'End If
+
 
     End Sub
 
@@ -16,27 +34,38 @@ Coding Boot Camp")
         RichTextBox1.Clear()
     End Sub
 
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
 
         'Open File Dialog
         Dim ofd As OpenFileDialog = New OpenFileDialog()
+        With ofd
+            .Filter = "Text Files | *.txt"
+            .Title = "Open a File"
+            .FileName = ""
+            .CheckFileExists = vbTrue
+        End With
 
-        'Get File from user
-        Dim dr As DialogResult = ofd.ShowDialog()
+        If ofd.ShowDialog = DialogResult.OK Then
+            RichTextBox1.LoadFile(ofd.FileName, RichTextBoxStreamType.PlainText)
+        End If
+        'Dim dr As DialogResult = ofd.ShowDialog()
 
-        'get filename from dialog result
-        Dim filename = ofd.FileName
+        'get filepath
+        Dim path = ofd.FileName
 
         'get stream reader
-        Dim fr = New StreamReader(filename)
+        'Dim sr = New StreamReader(path)
 
         'read lines until we get to the end of the stream
-        While Not fr.EndOfStream
-            RichTextBox1.Text += fr.ReadLine()
-        End While
+        'While Not sr.EndOfStream
+        'RichTextBox1.Text += sr.ReadToEnd()
+        'End While
 
-        'close file reader
-        fr.Close()
+        'close streamreader
+        'SR.Close()
+
+        'show open file in window form
+        Me.Text = path
 
     End Sub
 
@@ -49,14 +78,7 @@ Coding Boot Camp")
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        'Word Wrap function
-        If CheckBox1.Checked = True Then
-            RichTextBox1.WordWrap = True
-        Else
-            RichTextBox1.WordWrap = False
-        End If
-    End Sub
+
 
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
 
@@ -66,6 +88,62 @@ Coding Boot Camp")
             RichTextBox1.ForeColor = FontDialog1.Color
         End If
 
+
+    End Sub
+
+    Private Sub WordWrapToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.Click
+
+        'Word Wrap function
+        If WordWrapToolStripMenuItem.CheckState = CheckState.Checked Then
+            RichTextBox1.WordWrap = True
+        End If
+        If WordWrapToolStripMenuItem.CheckState = CheckState.Unchecked Then
+            RichTextBox1.WordWrap = False
+        End If
+
+    End Sub
+
+    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Save.Click
+
+    End Sub
+
+    Private Sub HurricanesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HurricanesToolStripMenuItem.Click
+
+        'Carolina Hurricanes color theme
+        RichTextBox1.ForeColor = Color.Black
+        RichTextBox1.BackColor = Color.Red
+        MenuStrip1.ForeColor = Color.Red
+        MenuStrip1.BackColor = Color.Black
+
+    End Sub
+
+    Private Sub IndiansToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IndiansToolStripMenuItem.Click
+
+        'Cleveland Indians color theme
+        RichTextBox1.ForeColor = Color.DarkBlue
+        RichTextBox1.BackColor = Color.Red
+        MenuStrip1.ForeColor = Color.Red
+        MenuStrip1.BackColor = Color.DarkBlue
+
+    End Sub
+
+    Private Sub DarkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DarkToolStripMenuItem.Click
+
+        'Dark Color Theme
+        RichTextBox1.BackColor = Color.Black
+        MenuStrip1.BackColor = Color.Black
+        RichTextBox1.ForeColor = Color.White
+        MenuStrip1.ForeColor = Color.White
+
+    End Sub
+
+    Private Sub DefaultToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefaultToolStripMenuItem.Click
+
+        'Default color theme
+        RichTextBox1.ForeColor = Color.Black
+        RichTextBox1.BackColor = Color.White
+        MenuStrip1.ForeColor = Color.Black
+        MenuStrip1.BackColor = Color.White
 
     End Sub
 End Class
