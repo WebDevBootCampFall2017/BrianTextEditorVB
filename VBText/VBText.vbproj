@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindandReplaceDialog.Designer.vb">
+      <DependentUpon>FindandReplaceDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindandReplaceDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDialog.Designer.vb">
+      <DependentUpon>FindDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FindandReplaceDialog.resx">
+      <DependentUpon>FindandReplaceDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDialog.resx">
+      <DependentUpon>FindDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

@@ -9,3 +9,5 @@ c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBT
 c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.xml
 c:\users\bport\documents\visual studio 2017\Projects\VBText\VBText\obj\Debug\VBText.pdb
 C:\Users\bport\Documents\Visual Studio 2017\Projects\VBText\VBText\obj\Debug\VBText.vbprojResolveAssemblyReference.cache
+C:\Users\bport\Documents\Visual Studio 2017\Projects\VBText\VBText\obj\Debug\VBText.FindandReplaceDialog.resources
+C:\Users\bport\Documents\Visual Studio 2017\Projects\VBText\VBText\obj\Debug\VBText.FindDialog.resources

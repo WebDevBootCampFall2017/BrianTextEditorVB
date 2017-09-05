@@ -1,8 +1,12 @@
 ﻿Imports System.IO
 
 Public Class Form1
+
+    Dim path As String
+
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAs.Click
 
+        'save as function
         Dim sfd As SaveFileDialog = New SaveFileDialog
         sfd.DefaultExt = ".txt"
         sfd.Filter = "Text Files | *.txt"
@@ -51,7 +55,7 @@ Coding Boot Camp")
         'Dim dr As DialogResult = ofd.ShowDialog()
 
         'get filepath
-        Dim path = ofd.FileName
+        path = ofd.FileName
 
         'get stream reader
         'Dim sr = New StreamReader(path)
@@ -105,6 +109,14 @@ Coding Boot Camp")
 
     Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Save.Click
 
+        'Save Function
+        Try
+            File.WriteAllText(Path, RichTextBox1.Text)
+        Catch ex As Exception
+            MessageBox.Show("Error, invalid file path")
+
+        End Try
+
     End Sub
 
     Private Sub HurricanesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HurricanesToolStripMenuItem.Click
@@ -144,6 +156,18 @@ Coding Boot Camp")
         RichTextBox1.BackColor = Color.White
         MenuStrip1.ForeColor = Color.Black
         MenuStrip1.BackColor = Color.White
+
+    End Sub
+
+    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
+
+        FindDialog.ShowDialog()
+
+    End Sub
+
+    Private Sub FindAndReplaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindAndReplaceToolStripMenuItem.Click
+
+        FindandReplaceDialog.ShowDialog()
 
     End Sub
 End Class

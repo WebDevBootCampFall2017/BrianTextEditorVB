@@ -34,6 +34,10 @@ Partial Class Form1
         Me.FindAndReplaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HurricanesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IndiansToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DarkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgramInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,10 +46,6 @@ Partial Class Form1
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.HurricanesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IndiansToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DarkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -128,6 +128,30 @@ Partial Class Form1
         Me.WindowThemeToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.WindowThemeToolStripMenuItem.Text = "Window Theme"
         '
+        'HurricanesToolStripMenuItem
+        '
+        Me.HurricanesToolStripMenuItem.Name = "HurricanesToolStripMenuItem"
+        Me.HurricanesToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.HurricanesToolStripMenuItem.Text = "Hurricanes"
+        '
+        'IndiansToolStripMenuItem
+        '
+        Me.IndiansToolStripMenuItem.Name = "IndiansToolStripMenuItem"
+        Me.IndiansToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.IndiansToolStripMenuItem.Text = "Indians"
+        '
+        'DarkToolStripMenuItem
+        '
+        Me.DarkToolStripMenuItem.Name = "DarkToolStripMenuItem"
+        Me.DarkToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.DarkToolStripMenuItem.Text = "Dark"
+        '
+        'DefaultToolStripMenuItem
+        '
+        Me.DefaultToolStripMenuItem.Name = "DefaultToolStripMenuItem"
+        Me.DefaultToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.DefaultToolStripMenuItem.Text = "Default"
+        '
         'WordWrapToolStripMenuItem
         '
         Me.WordWrapToolStripMenuItem.Checked = True
@@ -163,30 +187,6 @@ Partial Class Form1
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'HurricanesToolStripMenuItem
-        '
-        Me.HurricanesToolStripMenuItem.Name = "HurricanesToolStripMenuItem"
-        Me.HurricanesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.HurricanesToolStripMenuItem.Text = "Hurricanes"
-        '
-        'IndiansToolStripMenuItem
-        '
-        Me.IndiansToolStripMenuItem.Name = "IndiansToolStripMenuItem"
-        Me.IndiansToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.IndiansToolStripMenuItem.Text = "Indians"
-        '
-        'DarkToolStripMenuItem
-        '
-        Me.DarkToolStripMenuItem.Name = "DarkToolStripMenuItem"
-        Me.DarkToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DarkToolStripMenuItem.Text = "Dark"
-        '
-        'DefaultToolStripMenuItem
-        '
-        Me.DefaultToolStripMenuItem.Name = "DefaultToolStripMenuItem"
-        Me.DefaultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DefaultToolStripMenuItem.Text = "Default"
         '
         'Form1
         '
