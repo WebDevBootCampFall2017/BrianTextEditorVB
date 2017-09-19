@@ -122,8 +122,8 @@ Coding Boot Camp")
     Private Sub HurricanesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HurricanesToolStripMenuItem.Click
 
         'Carolina Hurricanes color theme
-        RichTextBox1.ForeColor = Color.Black
-        RichTextBox1.BackColor = Color.Red
+        'RichTextBox1.ForeColor = Color.Black
+        'RichTextBox1.BackColor = Color.Red
         MenuStrip1.ForeColor = Color.Red
         MenuStrip1.BackColor = Color.Black
 
@@ -132,8 +132,8 @@ Coding Boot Camp")
     Private Sub IndiansToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IndiansToolStripMenuItem.Click
 
         'Cleveland Indians color theme
-        RichTextBox1.ForeColor = Color.DarkBlue
-        RichTextBox1.BackColor = Color.Red
+        'RichTextBox1.ForeColor = Color.DarkBlue
+        'RichTextBox1.BackColor = Color.Red
         MenuStrip1.ForeColor = Color.Red
         MenuStrip1.BackColor = Color.DarkBlue
 
@@ -142,9 +142,9 @@ Coding Boot Camp")
     Private Sub DarkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DarkToolStripMenuItem.Click
 
         'Dark Color Theme
-        RichTextBox1.BackColor = Color.Black
+        'RichTextBox1.BackColor = Color.Black
         MenuStrip1.BackColor = Color.Black
-        RichTextBox1.ForeColor = Color.White
+        'RichTextBox1.ForeColor = Color.White
         MenuStrip1.ForeColor = Color.White
 
     End Sub
@@ -152,8 +152,8 @@ Coding Boot Camp")
     Private Sub DefaultToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefaultToolStripMenuItem.Click
 
         'Default color theme
-        RichTextBox1.ForeColor = Color.Black
-        RichTextBox1.BackColor = Color.White
+        'RichTextBox1.ForeColor = Color.Black
+        'RichTextBox1.BackColor = Color.White
         MenuStrip1.ForeColor = Color.Black
         MenuStrip1.BackColor = Color.White
 
@@ -161,13 +161,77 @@ Coding Boot Camp")
 
     Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
 
-        FindDialog.ShowDialog()
+        'FindDialog.ShowDialog()
+        Dim title As String
+        Dim instruct As String
+        Dim user_input As String
+        Dim find_target As String
+
+        title = "Find"
+        instruct = "Enter the word you would like to find"
+        user_input = ""
+
+        find_target = InputBox(instruct, title, user_input, 250, 150)
+
+        If find_target IsNot "" Then
+            Dim word_length = user_input.Length
+            Dim word_location = RichTextBox1.Find(find_target, 0, RichTextBoxFinds.WholeWord)
+
+            Try
+                RichTextBox1.Select(word_location, word_length)
+
+            Catch ex As Exception
+                MessageBox.Show("That word is not in the document")
+
+            End Try
+        End If
 
     End Sub
 
     Private Sub FindAndReplaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindAndReplaceToolStripMenuItem.Click
 
-        FindandReplaceDialog.ShowDialog()
+        'FindandReplaceDialog.ShowDialog()
+
+        Dim finstruct As String
+        Dim ftitle As String
+        Dim fruser_input As String
+        Dim fr_target As String
+
+        finstruct = "Enter the word you would like replaced below"
+        ftitle = "Find"
+        fruser_input = ""
+
+        fr_target = InputBox(finstruct, ftitle, fruser_input1, 250, 150)
+
+        Dim rinstruct As String
+        Dim rtitle As String
+        Dim fruser_input2 As String
+        Dim fr_target2 As String
+
+        rinstruct = "Enter the word you would like inserted"
+        rtitle = "Replace"
+        fruser_input2 = ""
+
+        fr_target2 = InputBox(rinstruct, rtitle, fruser_input2, 250, 150)
+
+        If fruser_input & fruser_input2 IsNot "" Then
+            Dim fwordlength = fr_target.Length
+            Dim rwordlength = fr_target2.Length
+            Dim f_location = RichTextBox1.Find(fr_target, 0, RichTextBoxFinds.WholeWord)
+
+            While f_location >= 0
+                If rwordlength > fwordlength Then
+                    RichTextBox1.Text = RichTextBox1.Text.Remove(f_location, fwordlength)
+                    RichTextBox1.Text = RichTextBox1.Text.Insert(f_location, fr_target2)
+                Else
+                    RichTextBox1.Select(f_location, fwordlength)
+                    RichTextBox1.SelectedText = fr_target2
+
+                End If
+                f_location = RichTextBox1.Find(fr_target, f_location + rwordlength, RichTextBoxFinds.WholeWord)
+            End While
+
+        End If
 
     End Sub
 End Class
